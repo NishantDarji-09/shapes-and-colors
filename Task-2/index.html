@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Shapes & Color</title>
+  </head>
+  <body>
+    <div class="main_Container" id="main_Container">
+      <div class="shapes" id="shapes">
+        <div class="square" id="square"></div>
+        <div class="circle" id="circle"></div>
+        <div class="ellipse" id="ellipse"></div>
+        <div class="rectangle" id="rectangle"></div>
+        <div class="removeDisplay" id="removeEverything"></div>
+      </div>
+      <div class="effects">
+        <div class="timeOut">
+          <label for="TimeOut"> Time Out :  </label>
+            <select name="timeout" id="timeout">
+              <option value="0000">Select</option>
+              <option value="1000">1s</option>
+              <option value="2000">2s</option>
+              <option value="3000">3s</option>
+              <option value="4000">4s</option>
+              <option value="5000">5s</option>
+              <option value="6000">6s</option>
+              <option value="7000">7s</option>
+              <option value="8000">8s</option>
+              <option value="9000">9s</option>
+              <option value="10000">10s</option>
+            </select>
+        </div>
+        <div class="transition">
+          <label for="Transition"> Transition : </label>
+          <select name="transitionbox" id="transitionBox">
+            <option value="0">select</option>
+            <option value="1s">1s</option>
+              <option value="2s">2s</option>
+              <option value="3s">3s</option>
+              <option value="4s">4s</option>
+              <option value="5s">5s</option>
+              <option value="6s">6s</option>
+              <option value="7s">7s</option>
+              <option value="8s">8s</option>
+              <option value="9s">9s</option>
+              <option value="10s">10s</option>
+          </select>
+        </div>
+      </div>
+      <div class="allButtons">
+        <div class="shapesButtons">
+          <input
+            type="submit"
+            class="shapeChange"
+            id="squareButton"
+            value="Square Button"
+          />
+          <input
+            type="submit"
+            class="shapeChange"
+            id="circleButton"
+            value="Circle Button"
+          />
+          <input
+            type="submit"
+            class="shapeChange"
+            id="ellipseButton"
+            value="Ellipse Button"
+          />
+          <input
+            type="submit"
+            class="shapeChange"
+            id="rectangleButton"
+            value="Rectangle Button"
+          />
+        </div>
+        <div class="colors">
+          <input type="submit" class="colorChange" id="red" value="RED" />
+          <input type="submit" class="colorChange" id="blue" value="BLUE" />
+          <input type="submit" class="colorChange" id="green" value="GREEN" />
+          <input
+            type="submit"
+            class="colorChange"
+            id="orange"
+            value="ORANGE"
+          />
+        </div>
+        <input
+          type="submit"
+          class="shapeChange"
+          id="removeButton"
+          value="Remove Everything"
+        />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<style>
+  .main_Container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: -webkit-center;
+  }
+  input {
+    margin: 0 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .shapes {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+  }
+  .square {
+    display: none;
+    height: 120px;
+    width: 120px;
+    border: 1px solid black;
+  }
+  .circle {
+    display: none;
+    height: 120px;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .ellipse {
+    display: none;
+    height: 80px;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .rectangle {
+    display: none;
+    height: 80px;
+    width: 160px;
+    border: 1px solid black;
+  }
+  .colors {
+    margin: 2rem;
+  }
+  .shapesButtons {
+    margin: 2rem 0;
+  }
+  .effects {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+  }
+  #timeout, #transitionBox {
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid black;
+    margin: 10px;
+  }
+
+
+</style>
